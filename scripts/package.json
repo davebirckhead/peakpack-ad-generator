@@ -1,0 +1,22 @@
+{
+  "name": "peakpack-ad-generator",
+  "version": "1.0.0",
+  "description": "Canvas-based ad variant generator for PeakPack campaign",
+  "main": "batch-generator.js",
+  "scripts": {
+    "generate": "node batch-generator.js",
+    "serve": "python3 -m http.server 8000",
+    "dev": "npm run serve"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2"
+  },
+  "keywords": [
+    "ads",
+    "canvas",
+    "automation",
+    "design"
+  ],
+  "author": "Claude Code",
+  "license": "MIT"
+}

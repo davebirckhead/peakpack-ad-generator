@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1200" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1F2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" rx="160" fill="url(#lg)"/>
+  <g id="Mark" transform="translate(300,360)">
+    <circle cx="300" cy="240" r="200" fill="#F59E0B"/>
+    <path d="M300 120 L360 280 L300 260 L240 280 Z" fill="#111827"/>
+  </g>
+  <text x="600" y="960" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="120" font-weight="800" fill="#F9FAFB">PeakPack</text>
+</svg>

@@ -1,0 +1,51 @@
+# Ad variant plan for Claude Code + Figma MCP demo
+# Copy limits follow Google Responsive Display Ads specs:
+# - Headlines: 30 chars max (up to 5)
+# - Long headline: 90 chars max (up to 1–5)
+# - Descriptions: 90 chars max (up to 5)
+# - Business name: 25 chars max
+# - Image max size: 5 MB; ratios 1.91:1 (1200x628), 1:1 (1200x1200), 4:5 (960x1200)
+personas:
+  - id: trail_runner
+    name: "Trail Runner"
+    angle: "Lightweight, bounce-free, breathable"
+  - id: tech_commuter
+    name: "Tech Commuter"
+    angle: "Laptop-safe, TSA-friendly, sleek"
+  - id: budget_explorer
+    name: "Budget Explorer"
+    angle: "Durable value, student-friendly"
+
+locales:
+  - id: en-US
+    currency: "USD"
+    price: "$129"
+    cta: "Shop now"
+    locale_notice: "Ships free in the U.S."
+  - id: es-MX
+    currency: "MXN"
+    price: "$2,190"
+    cta: "Compra ahora"
+    locale_notice: "Envío gratis en México"
+  - id: fr-FR
+    currency: "EUR"
+    price: "129 €"
+    cta: "Acheter"
+    locale_notice: "Livraison gratuite en France"
+
+base_copy:
+  business_name: "PeakPack"
+  product: "PeakPack Pro 30L"
+  headlines:
+    - "Carry More. Go Farther."   # 24 chars
+    - "Built for Everyday Adventure" # 28
+  long_headlines:
+    - "Weatherproof 30L daypack—lightweight, durable, and built for everyday adventure"
+  descriptions:
+    - "Organized storage, quick-access pockets, and a lifetime warranty."
+    - "Comfortable, breathable straps and a rugged, weatherproof shell."
+
+assets:
+  product_image_placeholder: "Replace HeroImage card with product shot in Figma"
+  logo_square_svg: "figma_logo_square_1200x1200.svg"
+  master_frame_svg: "figma_ad_master_1200x628.svg"

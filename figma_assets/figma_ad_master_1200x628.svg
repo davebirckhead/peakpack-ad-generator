@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="628" viewBox="0 0 1200 628" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="628" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1F2937"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect id="BG" width="1200" height="628" fill="url(#bg)"/>
+
+  <!-- Brand/Logo area -->
+  <g id="Brand" transform="translate(48,40)">
+    <rect id="LogoMark" width="40" height="40" rx="8" fill="#F59E0B"/>
+    <text id="BrandName" x="56" y="30" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#F9FAFB">PeakPack</text>
+  </g>
+
+  <!-- Hero product block (replace with image in Figma) -->
+  <g id="HeroImage" transform="translate(720,80)" filter="url(#shadow)">
+    <rect width="400" height="468" rx="24" fill="#111827" stroke="#374151" stroke-width="2"/>
+    <text x="200" y="234" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#9CA3AF">Drop product image here</text>
+  </g>
+
+  <!-- Content block -->
+  <g id="Content" transform="translate(48,180)">
+    <text id="HeadlineShort" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800" fill="#F9FAFB">Carry More. Go Farther.</text>
+    <text id="Subheadline" y="90" font-family="Inter, Arial, sans-serif" font-size="22" fill="#E5E7EB" xml:space="preserve">
+      Versatile {product} built for {persona}. 30L. Weatherproof. Lifetime warranty.
+    </text>
+
+    <g id="Badges" transform="translate(0,130)">
+      <rect id="Badge-1" width="170" height="36" rx="18" fill="#111827" stroke="#6B7280"/>
+      <text x="20" y="24" font-family="Inter, Arial, sans-serif" font-size="16" fill="#D1D5DB">New • 20% lighter</text>
+    </g>
+
+    <g id="CTA" transform="translate(0,200)">
+      <rect id="CTA-Button" width="240" height="56" rx="12" fill="#F59E0B"/>
+      <text id="CTA-Text" x="120" y="36" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">Shop now</text>
+    </g>
+
+    <g id="Price" transform="translate(270,200)">
+      <text id="PriceText" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#F9FAFB">$129</text>
+    </g>
+
+    <g id="Legal" transform="translate(0,270)">
+      <text id="LegalText" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9CA3AF">* Limited-time introductory price. {locale_notice}</text>
+    </g>
+  </g>
+
+  <!-- Persona tag -->
+  <g id="PersonaTag" transform="translate(48,112)">
+    <rect width="210" height="32" rx="8" fill="#111827" stroke="#4B5563"/>
+    <text x="12" y="22" font-family="Inter, Arial, sans-serif" font-size="14" fill="#D1D5DB">Persona: {persona}</text>
+  </g>
+
+  <!-- Size annotation (delete in production) -->
+  <text id="Annotation" x="1152" y="612" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="12" fill="#6B7280">1200×628 master • rename layers freely</text>
+</svg>

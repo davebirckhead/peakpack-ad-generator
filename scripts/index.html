@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeakPack Ad Variant Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: rgba(255, 149, 0, 0.1);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .controls {
+            background: rgba(42, 42, 42, 0.8);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .controls h2 {
+            margin-bottom: 1rem;
+            color: #ff9500;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #ff9500 0%, #ffb340 100%);
+            color: #000;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 149, 0, 0.3);
+        }
+        
+        button:disabled {
+            background: #555;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .progress {
+            background: rgba(68, 68, 68, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+        
+        .progress h3 {
+            margin-bottom: 1rem;
+            color: #ff9500;
+        }
+        
+        .progress-bar {
+            background: #333;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #ff9500, #ffb340);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        .preview-area {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .canvas-container {
+            background: rgba(51, 51, 51, 0.8);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid #444;
+        }
+        
+        .canvas-container h3 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #ff9500;
+            font-weight: bold;
+        }
+        
+        .canvas-container canvas {
+            border: 1px solid #555;
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .variant-info {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #aaa;
+            text-align: left;
+        }
+        
+        .variant-info div {
+            margin: 0.25rem 0;
+        }
+        
+        .download-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            background: rgba(255, 149, 0, 0.2);
+            border: 1px solid #ff9500;
+            color: #ff9500;
+        }
+        
+        .download-btn:hover {
+            background: rgba(255, 149, 0, 0.3);
+            color: #ffb340;
+        }
+        
+        .stats {
+            background: rgba(42, 42, 42, 0.8);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            display: none;
+        }
+        
+        .stats h3 {
+            color: #ff9500;
+            margin-bottom: 1rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(68, 68, 68, 0.5);
+            border-radius: 8px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff9500;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            border-top: 1px solid #333;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🎒 PeakPack Ad Generator</h1>
+        <p class="subtitle">Generate all 27 ad variants with Google RDA compliance</p>
+    </header>
+    
+    <div class="container">
+        <div class="controls">
+            <h2>🚀 Generation Controls</h2>
+            <div class="button-group">
+                <button onclick="generatePreview()" id="previewBtn">Generate Preview (3 samples)</button>
+                <button onclick="generateAllVariants()" id="generateBtn">Generate All 27 Variants</button>
+                <button onclick="downloadAll()" id="downloadBtn" disabled>Download All PNGs</button>
+                <button onclick="clearPreview()" id="clearBtn">Clear Preview</button>
+            </div>
+        </div>
+
+        <div class="progress" id="progressContainer">
+            <h3>🔄 Generating Variants...</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="progressText">0/27</span>
+                <span id="currentVariant">Ready to start</span>
+            </div>
+        </div>
+
+        <div class="stats" id="statsContainer">
+            <h3>📊 Generation Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalVariants">0</div>
+                    <div>Total Variants</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalFormats">0</div>
+                    <div>Formats</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalPersonas">0</div>
+                    <div>Personas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalLocales">0</div>
+                    <div>Locales</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-area" id="previewArea">
+            <!-- Generated canvases will appear here -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Generated with Canvas API • Compliant with Google Responsive Display Ads • WCAG AA Contrast</p>
+    </footer>
+
+    <script src="complete-ad-generator.js"></script>
+    <script>
+        let generator = new AdVariantGenerator();
+        let generatedVariants = [];
+
+        function generatePreview() {
+            const previewArea = document.getElementById('previewArea');
+            const previewBtn = document.getElementById('previewBtn');
+            
+            previewBtn.disabled = true;
+            previewBtn.textContent = 'Generating Preview...';
+            
+            // Clear existing preview
+            previewArea.innerHTML = '';
+            
+            // Generate first 3 variants as preview
+            const previewVariants = generator.variants.slice(0, 3);
+            
+            previewVariants.forEach((variant, index) => {
+                setTimeout(() => {
+                    const canvas = generator.createAdCanvas(variant);
+                    const container = createCanvasContainer(canvas, variant);
+                    previewArea.appendChild(container);
+                    
+                    if (index === previewVariants.length - 1) {
+                        previewBtn.disabled = false;
+                        previewBtn.textContent = 'Generate Preview (3 samples)';
+                    }
+                }, index * 200);
+            });
+        }
+
+        function createCanvasContainer(canvas, variant) {
+            const container = document.createElement('div');
+            container.className = 'canvas-container';
+            
+            const title = document.createElement('h3');
+            title.textContent = variant.frame_name;
+            
+            const info = document.createElement('div');
+            info.className = 'variant-info';
+            info.innerHTML = `
+                <div><strong>Format:</strong> ${variant.format}</div>
+                <div><strong>Persona:</strong> ${variant.persona}</div>
+                <div><strong>Locale:</strong> ${variant.locale}</div>
+                <div><strong>Headline:</strong> "${variant.headline}" (${variant.headline.length}/30)</div>
+                <div><strong>Subheadline:</strong> "${variant.subheadline}" (${variant.subheadline.length}/90)</div>
+            `;
+            
+            const downloadBtn = document.createElement('button');
+            downloadBtn.className = 'download-btn';
+            downloadBtn.textContent = 'Download PNG';
+            downloadBtn.onclick = () => downloadCanvas(canvas, variant.export_filename);
+            
+            container.appendChild(title);
+            container.appendChild(canvas);
+            container.appendChild(info);
+            container.appendChild(downloadBtn);
+            
+            return container;
+        }
+
+        async function generateAllVariants() {
+            const progressContainer = document.getElementById('progressContainer');
+            const progressText = document.getElementById('progressText');
+            const progressFill = document.getElementById('progressFill');
+            const currentVariant = document.getElementById('currentVariant');
+            const generateBtn = document.getElementById('generateBtn');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const previewArea = document.getElementById('previewArea');
+            
+            generateBtn.disabled = true;
+            generateBtn.textContent = 'Generating...';
+            progressContainer.style.display = 'block';
+            
+            // Clear existing preview
+            previewArea.innerHTML = '';
+            generatedVariants = [];
+            
+            const results = await generator.generateAll((current, total, variant) => {
+                const progress = (current / total) * 100;
+                progressFill.style.width = progress + '%';
+                progressText.textContent = `${current}/${total}`;
+                currentVariant.textContent = `Generating: ${variant.frame_name}`;
+            });
+            
+            generatedVariants = results;
+            
+            // Show results
+            results.forEach(result => {
+                const container = createCanvasContainer(result.canvas, result.variant);
+                previewArea.appendChild(container);
+            });
+            
+            // Update UI
+            generateBtn.disabled = false;
+            generateBtn.textContent = 'Generate All 27 Variants';
+            downloadBtn.disabled = false;
+            progressContainer.style.display = 'none';
+            
+            // Show stats
+            updateStats(results);
+            
+            console.log(`✅ Generated ${results.length} variants successfully!`);
+        }
+
+        function updateStats(results) {
+            const statsContainer = document.getElementById('statsContainer');
+            const formats = new Set(results.map(r => r.variant.format));
+            const personas = new Set(results.map(r => r.variant.persona));
+            const locales = new Set(results.map(r => r.variant.locale));
+            
+            document.getElementById('totalVariants').textContent = results.length;
+            document.getElementById('totalFormats').textContent = formats.size;
+            document.getElementById('totalPersonas').textContent = personas.size;
+            document.getElementById('totalLocales').textContent = locales.size;
+            
+            statsContainer.style.display = 'block';
+        }
+
+        function downloadCanvas(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png', 0.9);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function downloadAll() {
+            if (generatedVariants.length === 0) {
+                alert('Please generate variants first!');
+                return;
+            }
+            
+            const downloadBtn = document.getElementById('downloadBtn');
+            downloadBtn.disabled = true;
+            downloadBtn.textContent = 'Downloading...';
+            
+            generatedVariants.forEach((result, index) => {
+                setTimeout(() => {
+                    downloadCanvas(result.canvas, result.variant.export_filename);
+                    
+                    if (index === generatedVariants.length - 1) {
+                        downloadBtn.disabled = false;
+                        downloadBtn.textContent = 'Download All PNGs';
+                    }
+                }, index * 500); // Stagger downloads
+            });
+        }
+
+        function clearPreview() {
+            const previewArea = document.getElementById('previewArea');
+            const statsContainer = document.getElementById('statsContainer');
+            
+            previewArea.innerHTML = '';
+            statsContainer.style.display = 'none';
+            generatedVariants = [];
+            
+            document.getElementById('downloadBtn').disabled = true;
+        }
+
+        // Initialize with sample preview
+        window.addEventListener('load', () => {
+            console.log('🎒 PeakPack Ad Generator Ready!');
+            console.log(`📊 ${generator.variants.length} variants configured`);
+        });
+    </script>
+</body>
+</html>
