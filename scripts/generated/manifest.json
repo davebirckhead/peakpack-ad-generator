@@ -1,0 +1,195 @@
+{
+  "generatedAt": "2025-08-13T19:15:15.027Z",
+  "totalVariants": 27,
+  "variants": [
+    {
+      "fileName": "1200x1200_budget_explorer_en_US.jsx",
+      "format": "1200x1200",
+      "persona": "budget_explorer",
+      "locale": "en-US",
+      "exportName": "1200x1200_budget_explorer_en_US.png"
+    },
+    {
+      "fileName": "1200x1200_budget_explorer_es_MX.jsx",
+      "format": "1200x1200",
+      "persona": "budget_explorer",
+      "locale": "es-MX",
+      "exportName": "1200x1200_budget_explorer_es_MX.png"
+    },
+    {
+      "fileName": "1200x1200_budget_explorer_fr_FR.jsx",
+      "format": "1200x1200",
+      "persona": "budget_explorer",
+      "locale": "fr-FR",
+      "exportName": "1200x1200_budget_explorer_fr_FR.png"
+    },
+    {
+      "fileName": "1200x1200_tech_commuter_en_US.jsx",
+      "format": "1200x1200",
+      "persona": "tech_commuter",
+      "locale": "en-US",
+      "exportName": "1200x1200_tech_commuter_en_US.png"
+    },
+    {
+      "fileName": "1200x1200_tech_commuter_es_MX.jsx",
+      "format": "1200x1200",
+      "persona": "tech_commuter",
+      "locale": "es-MX",
+      "exportName": "1200x1200_tech_commuter_es_MX.png"
+    },
+    {
+      "fileName": "1200x1200_tech_commuter_fr_FR.jsx",
+      "format": "1200x1200",
+      "persona": "tech_commuter",
+      "locale": "fr-FR",
+      "exportName": "1200x1200_tech_commuter_fr_FR.png"
+    },
+    {
+      "fileName": "1200x1200_trail_runner_en_US.jsx",
+      "format": "1200x1200",
+      "persona": "trail_runner",
+      "locale": "en-US",
+      "exportName": "1200x1200_trail_runner_en_US.png"
+    },
+    {
+      "fileName": "1200x1200_trail_runner_es_MX.jsx",
+      "format": "1200x1200",
+      "persona": "trail_runner",
+      "locale": "es-MX",
+      "exportName": "1200x1200_trail_runner_es_MX.png"
+    },
+    {
+      "fileName": "1200x1200_trail_runner_fr_FR.jsx",
+      "format": "1200x1200",
+      "persona": "trail_runner",
+      "locale": "fr-FR",
+      "exportName": "1200x1200_trail_runner_fr_FR.png"
+    },
+    {
+      "fileName": "1200x628_budget_explorer_en_US.jsx",
+      "format": "1200x628",
+      "persona": "budget_explorer",
+      "locale": "en-US",
+      "exportName": "1200x628_budget_explorer_en_US.png"
+    },
+    {
+      "fileName": "1200x628_budget_explorer_es_MX.jsx",
+      "format": "1200x628",
+      "persona": "budget_explorer",
+      "locale": "es-MX",
+      "exportName": "1200x628_budget_explorer_es_MX.png"
+    },
+    {
+      "fileName": "1200x628_budget_explorer_fr_FR.jsx",
+      "format": "1200x628",
+      "persona": "budget_explorer",
+      "locale": "fr-FR",
+      "exportName": "1200x628_budget_explorer_fr_FR.png"
+    },
+    {
+      "fileName": "1200x628_tech_commuter_en_US.jsx",
+      "format": "1200x628",
+      "persona": "tech_commuter",
+      "locale": "en-US",
+      "exportName": "1200x628_tech_commuter_en_US.png"
+    },
+    {
+      "fileName": "1200x628_tech_commuter_es_MX.jsx",
+      "format": "1200x628",
+      "persona": "tech_commuter",
+      "locale": "es-MX",
+      "exportName": "1200x628_tech_commuter_es_MX.png"
+    },
+    {
+      "fileName": "1200x628_tech_commuter_fr_FR.jsx",
+      "format": "1200x628",
+      "persona": "tech_commuter",
+      "locale": "fr-FR",
+      "exportName": "1200x628_tech_commuter_fr_FR.png"
+    },
+    {
+      "fileName": "1200x628_trail_runner_en_US.jsx",
+      "format": "1200x628",
+      "persona": "trail_runner",
+      "locale": "en-US",
+      "exportName": "1200x628_trail_runner_en_US.png"
+    },
+    {
+      "fileName": "1200x628_trail_runner_es_MX.jsx",
+      "format": "1200x628",
+      "persona": "trail_runner",
+      "locale": "es-MX",
+      "exportName": "1200x628_trail_runner_es_MX.png"
+    },
+    {
+      "fileName": "1200x628_trail_runner_fr_FR.jsx",
+      "format": "1200x628",
+      "persona": "trail_runner",
+      "locale": "fr-FR",
+      "exportName": "1200x628_trail_runner_fr_FR.png"
+    },
+    {
+      "fileName": "960x1200_budget_explorer_en_US.jsx",
+      "format": "960x1200",
+      "persona": "budget_explorer",
+      "locale": "en-US",
+      "exportName": "960x1200_budget_explorer_en_US.png"
+    },
+    {
+      "fileName": "960x1200_budget_explorer_es_MX.jsx",
+      "format": "960x1200",
+      "persona": "budget_explorer",
+      "locale": "es-MX",
+      "exportName": "960x1200_budget_explorer_es_MX.png"
+    },
+    {
+      "fileName": "960x1200_budget_explorer_fr_FR.jsx",
+      "format": "960x1200",
+      "persona": "budget_explorer",
+      "locale": "fr-FR",
+      "exportName": "960x1200_budget_explorer_fr_FR.png"
+    },
+    {
+      "fileName": "960x1200_tech_commuter_en_US.jsx",
+      "format": "960x1200",
+      "persona": "tech_commuter",
+      "locale": "en-US",
+      "exportName": "960x1200_tech_commuter_en_US.png"
+    },
+    {
+      "fileName": "960x1200_tech_commuter_es_MX.jsx",
+      "format": "960x1200",
+      "persona": "tech_commuter",
+      "locale": "es-MX",
+      "exportName": "960x1200_tech_commuter_es_MX.png"
+    },
+    {
+      "fileName": "960x1200_tech_commuter_fr_FR.jsx",
+      "format": "960x1200",
+      "persona": "tech_commuter",
+      "locale": "fr-FR",
+      "exportName": "960x1200_tech_commuter_fr_FR.png"
+    },
+    {
+      "fileName": "960x1200_trail_runner_en_US.jsx",
+      "format": "960x1200",
+      "persona": "trail_runner",
+      "locale": "en-US",
+      "exportName": "960x1200_trail_runner_en_US.png"
+    },
+    {
+      "fileName": "960x1200_trail_runner_es_MX.jsx",
+      "format": "960x1200",
+      "persona": "trail_runner",
+      "locale": "es-MX",
+      "exportName": "960x1200_trail_runner_es_MX.png"
+    },
+    {
+      "fileName": "960x1200_trail_runner_fr_FR.jsx",
+      "format": "960x1200",
+      "persona": "trail_runner",
+      "locale": "fr-FR",
+      "exportName": "960x1200_trail_runner_fr_FR.png"
+    }
+  ]
+}
